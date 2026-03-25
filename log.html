@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Управление библиотечным фондом</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Управление библиотечным фондом</h1>
+
+            <nav>
+            <a href="polz.html">Пользователи</a>
+            <a href="roli.html">Настройки системы</a>
+            <a href="log.html">Журнал действий</a>
+            <a href="admin.html">Профиль</a>
+            </nav>
+        </header>
+<div class="container">
+
+    <div class="readable-window2">
+        <h2 class="center-text">Журнал действий системы</h2>
+
+        <!-- Форма фильтрации -->
+        <form>
+            <input type="date" placeholder="Дата с">
+            <input type="date" placeholder="Дата по">
+            <select>
+                <option>Все пользователи</option>
+                <option>Администратор</option>
+                <option>Библиотекарь</option>
+            </select>
+            <select>
+                <option>Все действия</option>
+                <option>Вход в систему</option>
+                <option>Создание/редактирование/удаление пользователя</option>
+                <option>Выдача/Возврат книги</option>
+                <option>Изменение настроек</option>
+            </select>
+            <button type="submit">Применить фильтр</button>
+        </form>
+
+        <h3>Последние действия</h3>
+
+        <div class="menu-item">
+            <p>15.03.2026 10:12 — Иванова Мария Сергеевна — Вход в систему</p>
+        </div>
+
+        <div class="menu-item critical">
+            <p>15.03.2026 10:25 — Смирнов Алексей Петрович — Удаление пользователя Петров П.П.</p>
+        </div>
+
+        <div class="menu-item">
+            <p>15.03.2026 11:05 — Смирнов Алексей Петрович — Выдача книги "1984" Иванову И.И.</p>
+        </div>
+
+        <div class="menu-item">
+            <p>15.03.2026 11:40 — Смирнов Алексей Петрович — Возврат книги "Преступление и наказание" Сидоровой М.А.</p>
+        </div>
+
+        <div class="menu-item critical">
+            <p>15.03.2026 12:10 — Иванова Мария Сергеевна — Изменение настроек безопасности</p>
+        </div>
+
+    </div>
+
+</div> 
+        <footer>
+            <p>2026 Информационная система управления библиотечным фондом</p>
+        </footer>
+    </body>
+</html>

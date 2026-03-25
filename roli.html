@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Управление библиотечным фондом</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Управление библиотечным фондом</h1>
+
+            <nav>
+            <a href="polz.html">Пользователи</a>
+            <a href="roli.html">Настройки системы</a>
+            <a href="log.html">Журнал действий</a>
+            <a href="admin.html">Профиль</a>
+            </nav>
+        </header>
+<div class="container">
+
+    <div class="readable-window2">
+        <h2 class="center-text">Настройка системы</h2>
+
+        <h3>Основные параметры</h3>
+        <form>
+            <input type="text" placeholder="Название системы" value="Информационная система управления библиотечным фондом">
+            <input type="text" placeholder="Название библиотеки" value="Библиотека учебного заведения">
+            <input type="text" placeholder="Контактный email" value="library@mail.ru">
+            <input type="text" placeholder="Телефон" value="+7 (123) 456-78-90">
+            <button type="submit">Сохранить основные параметры</button>
+        </form>
+
+        <h3>Настройки безопасности</h3>
+        <form>
+            <label>
+                Минимальная длина пароля:
+                <input type="number" value="8">
+            </label>
+            <label>
+                Политика сложности пароля:
+                <select>
+                    <option>Любая</option>
+                    <option>Цифры и буквы</option>
+                    <option>Цифры, буквы и спецсимволы</option>
+                </select>
+            </label>
+            <label>
+                Резервное копирование:
+                <select>
+                    <option>Ежедневно</option>
+                    <option>Еженедельно</option>
+                    <option>Ежемесячно</option>
+                </select>
+            </label>
+            <button type="submit">Сохранить настройки безопасности</button>
+        </form>
+
+        <h3>Настройка интерфейса</h3>
+        <form>
+            <label>
+                Тема интерфейса:
+                <select>
+                    <option>Светлая</option>
+                    <option>Тёмная</option>
+                </select>
+            </label>
+            <label>
+                Загрузка логотипа:
+                <input type="file" accept="image/*">
+            </label>
+            <button type="submit">Сохранить настройки интерфейса</button>
+        </form>
+
+    </div>
+
+</div>
+        <footer>
+            <p>2026 Информационная система управления библиотечным фондом</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Управление библиотечным фондом</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Управление библиотечным фондом</h1>
+
+            <nav>
+            <a href="polz.html">Пользователи</a>
+            <a href="roli.html">Настройки системы</a>
+            <a href="log.html">Журнал действий</a>
+            <a href="admin.html">Профиль</a>
+            </nav>
+        </header>
+<div class="container">
+
+    <div class="readable-window2">
+        <h2 class="center-text">Пользователи системы</h2>
+
+        <form>
+            <input type="text" placeholder="Поиск по имени или логину">
+            <select>
+                <option>Все роли</option>
+                <option>Администратор</option>
+                <option>Библиотекарь</option>
+                <option>Читатель</option>
+            </select>
+            <button type="submit">Найти</button>
+        </form>
+
+        <div class="menu-item">
+            <h3>Смирнов Алексей Петрович — smirnov_ap</h3>
+            <p>Роль: Библиотекарь | Email: smirnov@mail.ru</p>
+            <button>Редактировать</button>
+            <button>Удалить</button>
+        </div>
+
+        <div class="menu-item">
+            <h3>Иванова Мария Сергеевна — ivanova_ms</h3>
+            <p>Роль: Администратор | Email: ivanova@mail.ru</p>
+            <button>Редактировать</button>
+            <button>Удалить</button>
+        </div>
+
+        <div class="menu-item">
+            <h3>Петров Пётр Петрович — petrov_pp</h3>
+            <p>Роль: Библиотекарь | Email: petrov@mail.ru</p>
+            <button>Редактировать</button>
+            <button>Удалить</button>
+        </div>
+
+        <h2>Добавить нового пользователя</h2>
+        <form>
+            <input type="text" placeholder="ФИО" required>
+            <input type="text" placeholder="Логин" required>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Пароль" required>
+            <select required>
+                <option>Выберите роль</option>
+                <option>Администратор</option>
+                <option>Библиотекарь</option>
+                <option>Читатель</option>
+            </select>
+            <button type="submit">Добавить пользователя</button>
+        </form>
+
+    </div>
+
+</div>
+        <footer>
+            <p>2026 Информационная система управления библиотечным фондом</p>
+        </footer>
+    </body>
+</html>

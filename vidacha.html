@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Управление библиотечным фондом</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Управление библиотечным фондом</h1>
+
+            <nav>
+            <a href="kat.html">Каталог книг</a>
+            <a href="razdel-chit.html">Читатели</a>
+            <a href="vidacha.html">Выдача книг</a>
+            <a href="vozv.html">Возврат</a>
+            <a href="otchet.html">Отчеты</a>
+            <a href="bibl.html">Профиль</a>
+            </nav>
+        </header>
+<div class="container">
+
+    <div class="readable-window2">
+        <h2 class="center-text">Выдача книг</h2>
+
+        <h3>Выдать книгу читателю</h3>
+        <form>
+            <select required>
+                <option>Выберите читателя</option>
+                <option>Иванов Иван Иванович — №12345</option>
+                <option>Петров Пётр Петрович — №12346</option>
+                <option>Сидорова Мария Алексеевна — №12347</option>
+            </select>
+
+            <select required>
+                <option>Выберите книгу</option>
+                <option>1984 — Джордж Оруэлл</option>
+                <option>Мастер и Маргарита — М. Булгаков</option>
+                <option>Преступление и наказание — Ф.М. Достоевский</option>
+            </select>
+
+            <input type="date" placeholder="Дата выдачи" required>
+            <input type="date" placeholder="Срок возврата" required>
+
+            <button type="submit">Выдать книгу</button>
+        </form>
+
+        <h3>Текущие выдачи</h3>
+        <div class="menu-item book-item">
+            <img src="i.webp" alt="1984">
+            <div>
+            <p>Иванов Иван Иванович — 1984 | Дата выдачи: 12.03.2026 | Срок возврата: 26.03.2026</p>
+            <button>Отметить возврат</button>
+            </div>
+        </div>
+
+        <div class="menu-item book-item">
+            <img src="bul.webp" alt="1984">
+            <div>
+            <p>Петров Пётр Петрович — Мастер и Маргарита | Дата выдачи: 10.03.2026 | Срок возврата: 24.03.2026</p>
+            <button>Отметить возврат</button>
+            </div>
+        </div>
+
+        <div class="menu-item book-item">
+            <img src="prest.webp" alt="1984">
+            <div>
+            <p>Сидорова Мария Алексеевна — Преступление и наказание | Дата выдачи: 14.03.2026 | Срок возврата: 28.03.2026</p>
+            <button>Отметить возврат</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+        <footer>
+            <p>2026 Информационная система управления библиотечным фондом</p>
+        </footer>
+    </body>
+</html>

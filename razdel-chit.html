@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Управление библиотечным фондом</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Управление библиотечным фондом</h1>
+
+            <nav>
+            <a href="kat.html">Каталог книг</a>
+            <a href="razdel-chit.html">Читатели</a>
+            <a href="vidacha.html">Выдача книг</a>
+            <a href="vozv.html">Возврат</a>
+            <a href="otchet.html">Отчеты</a>
+            <a href="bibl.html">Профиль</a>
+            </nav>
+        </header>
+<div class="container">
+
+    <div class="readable-window2">
+        <h2 class="center-text">Читатели</h2>
+
+        <form>
+            <input type="text" placeholder="Поиск по ФИО или номеру билета">
+            <button type="submit">Найти</button>
+        </form>
+
+        <div class="menu-item">
+            <h3>Иванов Иван Иванович — №12345</h3>
+            <p>Контакты: ivanov@mail.ru | История выдач: 5 книг | Задолженность: нет</p>
+            <button>Редактировать</button>
+            <button>Удалить</button>
+        </div>
+
+        <div class="menu-item">
+            <h3>Петров Пётр Петрович — №12346</h3>
+            <p>Контакты: petrov@mail.ru | История выдач: 3 книги | Задолженность: 1 книга</p>
+            <button>Редактировать</button>
+            <button>Удалить</button>
+        </div>
+
+        <div class="menu-item">
+            <h3>Сидорова Мария Алексеевна — №12347</h3>
+            <p>Контакты: sidorova@mail.ru | История выдач: 2 книги | Задолженность: нет</p>
+            <button>Редактировать</button>
+            <button>Удалить</button>
+        </div>
+
+        <h2>Добавить читателя</h2>
+        <form>
+            <input type="text" placeholder="ФИО" required>
+            <input type="text" placeholder="Номер читательского билета" required>
+            <input type="email" placeholder="Контактный email">
+            <button type="submit">Добавить читателя</button>
+        </form>
+
+    </div>
+
+</div>
+        <footer>
+            <p>2026 Информационная система управления библиотечным фондом</p>
+        </footer>
+    </body>
+</html>

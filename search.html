@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Управление библиотечным фондом</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Управление библиотечным фондом</h1>
+
+            <nav>
+            <a href="search.html">Поиск книг</a>
+            <a href="book.html">Мои книги</a>
+            <a href="histor.html">История</a>
+            <a href="zadol.html">Задолженности</a>
+            <a href="chit.html">Профиль</a>
+            </nav>
+        </header>
+<div class="container">
+
+    <div class="readable-window2">
+        <h2 class="center-text">Поиск книг</h2>
+
+        <form>
+            <input type="text" placeholder="Название книги или автор">
+            <select>
+                <option>Все жанры</option>
+                <option>Роман</option>
+                <option>Фантастика</option>
+                <option>Антиутопия</option>
+                <option>Детектив</option>
+                <option>Сказка</option>
+            </select>
+            <input type="number" placeholder="Год издания">
+            <button type="submit">Найти</button>
+        </form>
+
+        <h3>Результаты</h3>
+
+        <div class="menu-item book-item">
+            <img src="i.webp" alt="1984">
+            <div>
+            <p><strong>1984</strong> — Джордж Оруэлл | Жанр: Антиутопия | Год: 1949 | Доступно: 4</p>
+            <button>Взять книгу</button>
+            </div>
+        </div>
+
+        <div class="menu-item book-item">
+            <img src="bul.webp" alt="1984">
+            <div>
+            <p><strong>Мастер и Маргарита</strong> — М. Булгаков | Жанр: Роман | Год: 1966 | Доступно: 0</p>
+            <button disabled>Недоступно</button>
+            </div>
+        </div>
+
+        <div class="menu-item book-item">
+            <img src="prest.webp" alt="1984">
+            <div>
+            <p><strong>Преступление и наказание</strong> — Ф.М. Достоевский | Жанр: Роман | Год: 1866 | Доступно: 2</p>
+            <button>Взять книгу</button>
+            </div>
+        </div>
+
+        <div class="menu-item book-item">
+            <img src="war.webp" alt="1984">
+            <div>
+            <p><strong>Война и мир</strong> — Л.Н. Толстой | Жанр: Роман | Год: 1869 | Доступно: 5</p>
+            <button>Взять книгу</button>
+            </div>
+        </div>
+
+        <div class="menu-item book-item">
+            <img src="pr.webp" alt="1984">
+            <div>
+            <p><strong>Маленький принц</strong> —  А. де Сент-Экзюпери | Жанр: Сказка | Год: 1943 | Доступно: 1</p>
+            <button>Взять книгу</button>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+        <footer>
+            <p>2026 Информационная система управления библиотечным фондом</p>
+        </footer>
+    </body>
+</html>

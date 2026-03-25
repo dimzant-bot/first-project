@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Управление библиотечным фондом</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Управление библиотечным фондом</h1>
+
+            <nav>
+            <a href="kat.html">Каталог книг</a>
+            <a href="razdel-chit.html">Читатели</a>
+            <a href="vidacha.html">Выдача книг</a>
+            <a href="vozv.html">Возврат</a>
+            <a href="otchet.html">Отчеты</a>
+            <a href="bibl.html">Профиль</a>
+            </nav>
+        </header>
+
+        <div class="container">
+
+    <div class="readable-window2">
+        <h2 class="center-text">Каталог книг</h2>
+
+        <form>
+            <input type="text" placeholder="Поиск по названию или автору">
+            <select>
+                <option>Все жанры</option>
+                <option>Роман</option>
+                <option>Фантастика</option>
+                <option>Антиутопия</option>
+            </select>
+            <button type="submit">Найти</button>
+        </form>
+
+        <div class="menu-item book-item">
+            <img src="i.webp" alt="1984">
+            <div>
+            <h3>1984 — Джордж Оруэлл</h3>
+            <p>Год: 1949 | Жанр: Антиутопия | Экземпляры: 4</p>
+            <button>Редактировать</button>
+            <button>Удалить</button>
+            </div>
+        </div>
+
+        <div class="menu-item book-item">
+            <img src="bul.webp" alt="1984">
+            <div>
+            <h3>Мастер и Маргарита — М. Булгаков</h3>
+            <p>Год: 1967 | Жанр: Роман | Экземпляры: 2</p>
+            <button>Редактировать</button>
+            <button>Удалить</button>
+            </div>
+        </div>
+
+        <div class="menu-item book-item">
+            <img src="prest.webp" alt="1984">
+            <div>
+            <h3>Преступление и наказание — Ф.М. Достоевский</h3>
+            <p>Год: 1866 | Жанр: Роман | Экземпляры: 5</p>
+            <button>Редактировать</button>
+            <button>Удалить</button>
+            </div>
+        </div>
+
+        <h2>Добавить книгу</h2>
+
+        <form>
+            <input type="text" placeholder="Название" required>
+            <input type="text" placeholder="Автор" required>
+            <input type="number" placeholder="Год издания">
+            
+            <select>
+                <option>Выберите жанр</option>
+                <option>Роман</option>
+                <option>Фантастика</option>
+                <option>Антиутопия</option>
+            </select>
+
+            <input type="number" placeholder="Количество экземпляров">
+            <button type="submit">Добавить книгу</button>
+        </form>
+
+    </div>
+
+</div>
+        <footer>
+            <p>2026 Информационная система управления библиотечным фондом</p>
+        </footer>
+    </body>
+</html>
