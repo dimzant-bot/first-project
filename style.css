@@ -1,4 +1,4 @@
-/* ===== ÏÅĞÅÌÅÍÍÛÅ (ÖÂÅÒÀ) ===== */
+
 :root {
     --bg-main: #0f172a;
     --bg-header: #111827;
@@ -12,14 +12,12 @@
     --danger-hover: #dc2626;
 }
 
-/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 html, body {
     height: 100%;
     font-family: 'Arial', sans-serif;
@@ -31,7 +29,6 @@ html, body {
     min-height: 100vh;
 }
 
-/* ===== HEADER ===== */
 header {
     background: var(--bg-header);
     padding: 20px 0;
@@ -43,7 +40,6 @@ header {
         font-size: 28px;
     }
 
-/* ===== NAV ===== */
 nav a {
     color: var(--text-soft);
     text-decoration: none;
@@ -59,7 +55,6 @@ nav a {
         background: rgba(56, 189, 248, 0.1);
     }
 
-/* ===== CONTAINER ===== */
 .container {
     width: 85%;
     max-width: 1100px;
@@ -67,7 +62,6 @@ nav a {
     flex: 1 0 auto;
 }
 
-/* ===== ÇÀÃÎËÎÂÊÈ ===== */
 h2 {
     font-size: 26px;
     color: var(--accent);
@@ -80,13 +74,11 @@ h3 {
     margin: 15px 0 8px;
 }
 
-/* ===== ÒÅÊÑÒ ===== */
 p {
     margin-bottom: 10px;
     color: var(--text-soft);
 }
 
-/* ===== ÊÀĞÒÎ×ÊÈ ===== */
 .readable-window,
 .readable-window2 {
     max-width: 900px;
@@ -97,7 +89,6 @@ p {
     border: 1px solid var(--border);
 }
 
-/* ===== ÑÏÈÑÎÊ ===== */
 .menu-item {
     border-bottom: 1px solid var(--border);
     padding: 12px 0;
@@ -107,7 +98,6 @@ p {
         background: rgba(56, 189, 248, 0.05);
     }
 
-/* ===== BUTTON ===== */
 button {
     background: var(--accent);
     color: #020617;
@@ -123,7 +113,6 @@ button {
         background: var(--accent-hover);
     }
 
-/* ===== FORM ===== */
 form input,
 form select {
     width: 100%;
@@ -142,7 +131,6 @@ form select {
         box-shadow: 0 0 5px rgba(56, 189, 248, 0.4);
     }
 
-/* ===== FOOTER ===== */
 footer {
     background: var(--bg-header);
     color: var(--text-soft);
@@ -152,7 +140,6 @@ footer {
     font-size: 14px;
 }
 
-/* ===== ÏĞÎ×ÅÅ ===== */
 .center-text {
     text-align: center;
 }
@@ -162,7 +149,6 @@ footer {
     font-weight: bold;
 }
 
-/* ===== ÊÍÎÏÊÈ ĞÎËÅÉ ===== */
 .role-buttons {
     display: flex;
     flex-direction: column;
@@ -185,7 +171,6 @@ footer {
         background: var(--accent-hover);
     }
 
-/* ===== ÂÛÕÎÄ ===== */
 .logout-btn {
     display: inline-block;
     background: var(--danger);
@@ -200,7 +185,6 @@ footer {
         background: var(--danger-hover);
     }
 
-/* ===== ÊÍÈÃÈ ===== */
 .book-item {
     display: flex;
     gap: 20px;
@@ -214,7 +198,6 @@ footer {
         border-radius: 6px;
     }
 
-/* ===== HEADER FLEX ===== */
 .header-content {
     display: flex;
     align-items: center;
@@ -222,7 +205,6 @@ footer {
     gap: 12px;
 }
 
-/* ===== LOGO ===== */
 .logo {
     width: 50px;
     height: 50px;
@@ -230,15 +212,13 @@ footer {
     object-fit: cover;
 }
 
-/* ÏĞÎÑĞÎ×ÅÍÍÀß ÊÍÈÃÀ */
 .overdue {
-    background: rgba(239, 68, 68, 0.12); /* ìÿãêèé êğàñíûé ôîí */
+    background: rgba(239, 68, 68, 0.12); /* Ã¬Ã¿Ã£ÃªÃ¨Ã© ÃªÃ°Ã Ã±Ã­Ã»Ã© Ã´Ã®Ã­ */
     border-left: 4px solid #ef4444;
     padding-left: 10px;
     border-radius: 6px;
 }
 
-    /* òåêñò âíóòğè ÷óòü ÿğ÷å */
     .overdue p {
         color: #fecaca;
     }
