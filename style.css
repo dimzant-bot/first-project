@@ -1,4 +1,4 @@
-
+/*Переменные*/
 :root {
     --bg-main: #0f172a;
     --bg-header: #111827;
@@ -11,13 +11,13 @@
     --danger: #ef4444;
     --danger-hover: #dc2626;
 }
-
+/*Общие сбросы*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*body*/
 html, body {
     height: 100%;
     font-family: 'Arial', sans-serif;
@@ -28,7 +28,7 @@ html, body {
     flex-direction: column;
     min-height: 100vh;
 }
-
+/*Шапка*/
 header {
     background: var(--bg-header);
     padding: 20px 0;
@@ -39,7 +39,7 @@ header {
     header h1 {
         font-size: 28px;
     }
-
+/*Навигация*/
 nav a {
     color: var(--text-soft);
     text-decoration: none;
@@ -54,14 +54,14 @@ nav a {
         color: var(--accent);
         background: rgba(56, 189, 248, 0.1);
     }
-
+/*Контейнер*/
 .container {
     width: 85%;
     max-width: 1100px;
     margin: 30px auto;
     flex: 1 0 auto;
 }
-
+/*Заголовки*/
 h2 {
     font-size: 26px;
     color: var(--accent);
@@ -78,7 +78,7 @@ p {
     margin-bottom: 10px;
     color: var(--text-soft);
 }
-
+/*Карточки, окна*/
 .readable-window,
 .readable-window2 {
     max-width: 900px;
@@ -88,7 +88,7 @@ p {
     border-radius: 10px;
     border: 1px solid var(--border);
 }
-
+/*Элементы списка*/
 .menu-item {
     border-bottom: 1px solid var(--border);
     padding: 12px 0;
@@ -97,7 +97,7 @@ p {
     .menu-item:hover {
         background: rgba(56, 189, 248, 0.05);
     }
-
+/*Кнопки*/
 button {
     background: var(--accent);
     color: #020617;
@@ -112,7 +112,7 @@ button {
     button:hover {
         background: var(--accent-hover);
     }
-
+/*Формы*/
 form input,
 form select {
     width: 100%;
@@ -130,7 +130,7 @@ form select {
         outline: none;
         box-shadow: 0 0 5px rgba(56, 189, 248, 0.4);
     }
-
+/*Футер*/
 footer {
     background: var(--bg-header);
     color: var(--text-soft);
@@ -139,79 +139,16 @@ footer {
     margin-top: 30px;
     font-size: 14px;
 }
-
+/*Центр*/
 .center-text {
     text-align: center;
 }
-
+/*Просроченность*/
 .overdue {
     color: var(--danger);
     font-weight: bold;
 }
-
-.role-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 30px;
-}
-
-.role-btn {
-    display: block;
-    text-align: center;
-    background: var(--accent);
-    color: #020617;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-    .role-btn:hover {
-        background: var(--accent-hover);
-    }
-
-.logout-btn {
-    display: inline-block;
-    background: var(--danger);
-    color: white;
-    padding: 6px 10px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
-    .logout-btn:hover {
-        background: var(--danger-hover);
-    }
-
-.book-item {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-    .book-item img {
-        width: 70px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 6px;
-    }
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
+/*Просроченность*/
 .overdue {
     background: rgba(239, 68, 68, 0.12);
     border-left: 4px solid #ef4444;
@@ -222,7 +159,7 @@ footer {
     .overdue p {
         color: #fecaca;
     }
-
+/*Кнопки ролей*/
 .role-buttons {
     display: flex;
     flex-direction: column;
@@ -246,7 +183,7 @@ footer {
     background: #0097a7;
     transform: scale(1.03);
 }
-
+/*Кнопка выхода*/
 .logout-btn {
     display: inline-block;
     background: #ff4c4c;
@@ -262,7 +199,7 @@ footer {
     background: #cc0000;
     transform: scale(1.03);
 }
-
+/*Элементы книг*/
 .book-item {
     display: flex;
     gap: 20px;
@@ -276,21 +213,21 @@ footer {
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
-
+/*Шапка*/
 .header-content {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
 }
-
+/*Логотип*/
 .logo {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
-
+/*Доп. стиль*/
 .suggested {
     border: 1px dashed var(--accent);
     padding: 15px;
@@ -298,13 +235,13 @@ footer {
     margin-bottom: 20px;
     background: rgba(56, 189, 248, 0.05);
 }
-
+/*Левая и правя часть = фотографи*/
 body::before,
 body::after {
     content: "";
     position: fixed;
     top: 0;
-    width: 400px;
+    width: 20%;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
