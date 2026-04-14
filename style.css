@@ -1,262 +1,415 @@
-/*Переменные*/ 
+/* ===================== */
+/* ПЕРЕМЕННЫЕ */
+/* ===================== */
 :root {
     --bg-main: #0f172a;
-    --bg-header: #111827;
-    --bg-card: #1e293b;
+    --bg-header: rgba(17, 24, 39, 0.9);
+    --bg-card: rgba(30, 41, 59, 0.75);
+
     --text-main: #e5e7eb;
     --text-soft: #cbd5e1;
+
     --accent: #38bdf8;
     --accent-hover: #0ea5e9;
-    --border: #334155;
+
+    --border: rgba(255,255,255,0.08);
+
     --danger: #ef4444;
-    --danger-hover: #dc2626;
 }
-/*Общие сбросы*/
+
+/* ===================== */
+/* RESET */
+/* ===================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*body*/
+
+/* ===================== */
+/* BODY */
+/* ===================== */
 html, body {
-    height: 100%;
+    min-height: 100%;
     font-family: 'Arial', sans-serif;
-    background: var(--bg-main);
+    background: radial-gradient(circle at top, #1e293b, #020617);
     color: var(--text-main);
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    line-height: 1.6;
 }
-/*Шапка*/
+
+/* ===================== */
+/* БОКОВЫЕ ФОНЫ (оставил как у тебя, но лучше) */
+/* ===================== */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 18%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    left: 0;
+    background-image:
+        linear-gradient(to right, rgba(2,6,23,0.95), transparent),
+        url('left.png');
+}
+
+body::after {
+    right: 0;
+    background-image:
+        linear-gradient(to left, rgba(2,6,23,0.95), transparent),
+        url('right.png');
+}
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
 header {
     background: var(--bg-header);
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 2;
 }
 
-    header h1 {
-        font-size: 28px;
-    }
-/*Навигация*/
-nav a {
-    color: var(--text-soft);
-    text-decoration: none;
-    margin: 0 12px;
-    font-size: 15px;
-    padding: 6px 10px;
-    border-radius: 6px;
-    transition: 0.2s;
-}
-
-    nav a:hover {
-        color: var(--accent);
-        background: rgba(56, 189, 248, 0.1);
-    }
-/*Контейнер*/
-.container {
-    width: 85%;
-    max-width: 1100px;
-    margin: 30px auto;
-    flex: 1 0 auto;
-}
-/*Заголовки*/
-h2 {
-    font-size: 26px;
-    color: var(--accent);
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 18px;
-    color: var(--text-main);
-    margin: 15px 0 8px;
-}
-
-p {
-    margin-bottom: 10px;
-    color: var(--text-soft);
-}
-/*Карточки, окна*/
-.readable-window,
-.readable-window2 {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 25px 30px;
-    background: var(--bg-card);
-    border-radius: 10px;
-    border: 1px solid var(--border);
-}
-/*Элементы списка*/
-.menu-item {
-    border-bottom: 1px solid var(--border);
-    padding: 12px 0;
-}
-
-    .menu-item:hover {
-        background: rgba(56, 189, 248, 0.05);
-    }
-/*Кнопки*/
-button {
-    background: var(--accent);
-    color: #020617;
-    border: none;
-    padding: 10px 20px;
-    font-size: 15px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: 0.2s;
-}
-
-    button:hover {
-        background: var(--accent-hover);
-    }
-/*Формы*/
-form input,
-form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: #020617;
-    color: var(--text-main);
-}
-
-    form input:focus,
-    form select:focus {
-        border-color: var(--accent);
-        outline: none;
-        box-shadow: 0 0 5px rgba(56, 189, 248, 0.4);
-    }
-/*Футер*/
-footer {
-    background: var(--bg-header);
-    color: var(--text-soft);
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
-    font-size: 14px;
-}
-/*Центр*/
-.center-text {
-    text-align: center;
-}
-/*Просроченность*/
-.overdue {
-    color: var(--danger);
-    font-weight: bold;
-}
-/*Просроченность*/
-.overdue {
-    background: rgba(239, 68, 68, 0.12);
-    border-left: 4px solid #ef4444;
-    padding-left: 10px;
-    border-radius: 6px;
-}
-
-    .overdue p {
-        color: #fecaca;
-    }
-/*Кнопки ролей*/
-.role-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.role-btn {
-    display: block;
-    text-align: center;
-    background: #00bcd4;
-    color: #1a1a2e;
-    padding: 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.role-btn:hover {
-    background: #0097a7;
-    transform: scale(1.03);
-}
-/*Кнопка выхода*/
-.logout-btn {
-    display: inline-block;
-    background: #ff4c4c;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 10px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.logout-btn:hover {
-    background: #cc0000;
-    transform: scale(1.03);
-}
-/*Элементы книг*/
-.book-item {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.book-item img {
-    width: 70px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-}
-/*Шапка*/
 .header-content {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
 }
-/*Логотип*/
+
 .logo {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 0 15px rgba(56,189,248,0.4);
 }
-/*Доп. стиль*/
-.suggested {
-    border: 1px dashed var(--accent);
-    padding: 15px;
-    border-radius: 8px;
+
+/* ===================== */
+/* NAV */
+/* ===================== */
+nav a {
+    color: var(--text-soft);
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent);
+    background: rgba(56,189,248,0.12);
+}
+
+/* ===================== */
+/* КОНТЕЙНЕР */
+/* ===================== */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 30px auto;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+/* ===================== */
+/* ЗАГОЛОВОК */
+/* ===================== */
+h2 {
+    font-size: 26px;
+    color: var(--accent);
     margin-bottom: 20px;
-    background: rgba(56, 189, 248, 0.05);
-}
-/*Левая и правя часть = фотографи*/
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    width: 20%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    pointer-events: none;
-    z-index: 0;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(56,189,248,0.4);
 }
 
-body::before {
-    left: 0;
-    background-image: url('left.png');
+/* ===================== */
+/* КАРТОЧКА */
+/* ===================== */
+.readable-window2 {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px 30px;
+
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+
+    border-radius: 12px;
+    border: 1px solid var(--border);
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 
-body::after {
-    right: 0;
-    background-image: url('right.png');
+/* ===================== */
+/* ЭЛЕМЕНТ КНИГИ */
+/* ===================== */
+.menu-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--border);
+    transition: 0.2s;
+}
+
+.menu-item:hover {
+    background: rgba(56,189,248,0.05);
+}
+
+/* ===================== */
+/* КНИГА */
+/* ===================== */
+.book-item img {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    transition: 0.2s;
+}
+
+.book-item img:hover {
+    transform: scale(1.05);
+}
+
+/* ===================== */
+/* ТЕКСТ */
+/* ===================== */
+p {
+    margin-bottom: 6px;
+    color: var(--text-soft);
+}
+
+/* ===================== */
+/* КНОПКА */
+/* ===================== */
+button {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #020617;
+
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: 0.2s;
+    box-shadow: 0 0 12px rgba(56,189,248,0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(56,189,248,0.6);
+}
+
+button:disabled {
+    background: #475569;
+    color: #cbd5e1;
+
+}
+
+/* ===================== */
+/* ПРОСРОЧКА */
+/* ===================== */
+.overdue {
+    background: rgba(239,68,68,0.12);
+    border-left: 4px solid var(--danger);
+    padding-left: 12px;
+    border-radius: 6px;
+}
+
+.overdue p {
+    color: #fecaca;
+}
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
+footer {
+    background: var(--bg-header);
+    text-align: center;
+    padding: 15px;
+    color: var(--text-soft);
+    z-index: 2;
+}
+
+/* ===================== */
+/*  ПОИСКОВЫЕ ПОЛЯ (красивый UI без поломки верстки) */
+/* ===================== */
+
+form input,
+form select {
+    background: rgba(2, 6, 23, 0.6); /* тёмная стеклянность */
+    color: var(--text-main);
+
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 10px;
+
+    padding: 10px 12px;
+    margin: 5px 6px 10px 0;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+
+    backdrop-filter: blur(6px);
+}
+
+/* hover */
+form input:hover,
+form select:hover {
+    border-color: rgba(56,189,248,0.4);
+}
+
+/* focus (главный эффект) */
+form input:focus,
+form select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(56,189,248,0.25);
+    background: rgba(2, 6, 23, 0.85);
+}
+
+/* placeholder стиль */
+form input::placeholder {
+    color: rgba(203, 213, 225, 0.6);
+}
+
+/* кнопка поиска (аккуратно, без ломки) */
+form button {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #020617;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 10px 16px;
+    margin-top: 5px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+    box-shadow: 0 0 10px rgba(56,189,248,0.25);
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(56,189,248,0.4);
+}
+
+
+/* ===================== */
+/* КНОПКИ РОЛЕЙ (ВХОД) */
+/* ===================== */
+
+.role-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+/* делаем как кнопки */
+.role-btn {
+    display: block;
+    text-align: center;
+
+    padding: 12px 14px;
+
+    background: rgba(2, 6, 23, 0.6);
+    color: var(--text-main);
+
+    border: 1px solid rgba(56,189,248,0.25);
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* hover */
+.role-btn:hover {
+    background: rgba(56,189,248,0.15);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(56,189,248,0.25);
+}
+
+
+/* ===================== */
+/* РЕГИСТРАЦИЯ — ЦЕНТРИРОВАНИЕ */
+/* ===================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* поля регистрации */
+form input {
+    width: 100%;
+    max-width: 420px;
+
+    margin-bottom: 10px;
+
+    background: rgba(2, 6, 23, 0.6);
+    color: var(--text-main);
+
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 10px;
+
+    padding: 10px 12px;
+}
+
+/* кнопка регистрации */
+form button {
+    width: 100%;
+    max-width: 420px;
+
+    margin-top: 10px;
+
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #020617;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+}
+
+/* ссылка под формой */
+form + p {
+    text-align: center;
+    margin-top: 12px;
+    color: var(--text-soft);
 }
